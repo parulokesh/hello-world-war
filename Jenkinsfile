@@ -1,5 +1,5 @@
 pipeline {
-    agent { lebel 'slave_1' }
+    agent { lebel 'slave3' }
     stages {
         stage('checkout') {
             steps {
