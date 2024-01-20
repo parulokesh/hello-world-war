@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'slave4' }
+    agent { label 'slave1' }
     stages {
         stage('checkout') {
             steps {
@@ -15,8 +15,8 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                sh 'ssh root@172.31.14.255'
-                sh ' scp /home/slave4/workspace/samplepipeline1/target/hello-world-war-1.0.0.war root@172.31.14.255:/opt/apache-tomcat-8.5.98/webapps/'
+                sh 'ssh root@172.31.9.223'
+                sh ' scp /home/slave1/workspace/samplepipeline1/target/hello-world-war-1.0.0.war root@172.31.9.223:/opt/apache-tomcat-8.5.98/webapps/'
     }
 }
     }
